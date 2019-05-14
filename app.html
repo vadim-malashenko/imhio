@@ -13,13 +13,28 @@
 
         <form name="form1">
 
-            <input nasme="email" placeholder="Email"/>
+            <input name="email" placeholder="Email"/>
 
         </form>
 
         <script>
 
+            const form1 = document.form1
 
+            const check = ev => {
+
+                ev.preventDefault ()
+
+                const data = new FormData ()
+                data.append ('email', form1.email.value)
+
+                fetch ('email/check', {method: 'POST', body: data})
+                    .then (r => r.json ())
+                    .then (r => alert (JSON.stringify (r)))
+                    .catch (console.warn)
+            }
+
+            form1.addEventListener ('submit', check)
 
         </script>
 
