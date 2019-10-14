@@ -31,4 +31,4 @@ https://mailboxlayer.comAPI
 3. JavaScript
 4. git
 
-http://auslogics/files/1.txt
+http://auslogics.com/files/1.txt
